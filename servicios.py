@@ -1,380 +1,307 @@
 """
-Programa para gestionar los servicios de la empresa Software FJ.
+MODULO DE SERVICIOS DE SOFTWARE FJ.
 
-Contiene una clase abstracta Servicio y tres clases especializadas:
-ReservaSala, AlquilerEquipo y Asesoria.
+Permite registrar y administrar los servicios de la empresa.
 
-Implementa abstraccion, herencia, polimorfismo, encapsulacion,
-validaciones y calculo de costos con impuestos y descuentos.
+Incluye:
+- Clase abstracta Servicio.
+- Reserva de salas.
+- Alquiler de equipos.
+- Asesorias especializadas.
+- Polimorfismo.
+- Calculo de costos.
+- Descuentos e IVA del 19%.
+- Validaciones de datos.
 """
 
-# IMPORTA LA CLASE ABSTRACTA Y SUS METODOS
+import math
+import logging
 
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 
-# IMPORTA LA CLASE ENTIDAD
-
-from entidades import Entidad
-
-# IMPORTA LAS EXCEPCIONES PERSONALIZADAS
-
-from excepciones import DatosInvalidosError, ServicioNoDisponibleError
-
-# CLASE ABSTRACTA QUE REPRESENTA LOS SERVICIOS DE SOFTWARE FJ
+# =====================================================
+# CLASE ABSTRACTA SERVICIO
+# =====================================================
 
 
-class Servicio(Entidad):
+class Servicio(ABC):
 
-    # CONSTRUCTOR DE LA CLASE SERVICIO
+    IVA = 19
+
     def __init__(
         self, identificador, nombre, descripcion, precio_base, disponible=True
     ):
 
-        # INICIALIZA LOS ATRIBUTOS DE LA CLASE PADRE
-        super().__init__(identificador, nombre)
+        # VALIDAR IDENTIFICADOR
 
-        # GUARDA LA DESCRIPCION DEL SERVICIO
-        self.__descripcion = descripcion
-
-        # GUARDA EL PRECIO BASE DEL SERVICIO
-        self.__precio_base = precio_base
-
-        # DEFINE SI EL SERVICIO ESTA DISPONIBLE
-        self.__disponible = disponible
-
-        # VALIDA LOS DATOS DEL SERVICIO
-        self.validar_datos()
-
-    # CONSULTA LA DESCRIPCION DEL SERVICIO
-    @property
-    def descripcion(self):
-        return self.__descripcion
-
-    # CONSULTA EL PRECIO BASE DEL SERVICIO
-    @property
-    def precio_base(self):
-        return self.__precio_base
-
-    # CONSULTA LA DISPONIBILIDAD DEL SERVICIO
-    @property
-    def disponible(self):
-        return self.__disponible
-
-    # MUESTRA LA INFORMACION GENERAL DEL SERVICIO
-    def mostrar_informacion(self):
-
-        return (
-            f"\nINFORMACION DEL SERVICIO\n"
-            f"Identificador: {self.identificador}\n"
-            f"Nombre: {self.nombre}\n"
-            f"Descripcion: {self.__descripcion}\n"
-            f"Precio base: ${self.__precio_base}\n"
-            f"Disponible: {self.__disponible}"
-        )
-
-    # MODIFICA LA DISPONIBILIDAD DEL SERVICIO
-    def cambiar_disponibilidad(self, estado):
-
-        if not isinstance(estado, bool):
-            raise DatosInvalidosError("La disponibilidad debe ser verdadera o falsa.")
-
-        self.__disponible = estado
-
-    # VALIDA LOS DATOS GENERALES DEL SERVICIO
-    def validar_datos(self):
-
-        if not isinstance(self.__descripcion, str) or not self.__descripcion.strip():
-            raise DatosInvalidosError("La descripcion del servicio es obligatoria.")
-
-        if isinstance(self.__precio_base, bool) or not isinstance(
-            self.__precio_base, (int, float)
+        if (
+            isinstance(identificador, bool)
+            or not isinstance(identificador, int)
+            or identificador <= 0
         ):
-            raise DatosInvalidosError("El precio base debe ser un valor numerico.")
+            raise ValueError("El identificador debe ser un entero mayor que cero.")
 
-        if self.__precio_base <= 0:
-            raise DatosInvalidosError("El precio base debe ser mayor que cero.")
+        # VALIDAR NOMBRE
 
-        if not isinstance(self.__disponible, bool):
-            raise DatosInvalidosError("La disponibilidad debe ser verdadera o falsa.")
+        if not isinstance(nombre, str) or not nombre.strip():
+            raise ValueError("El nombre es obligatorio.")
 
-        # EJECUTA LAS VALIDACIONES ESPECIFICAS DE CADA SERVICIO
-        self.validar_parametros()
+        # VALIDAR DESCRIPCION
 
-        return True
+        if not isinstance(descripcion, str) or not descripcion.strip():
+            raise ValueError("La descripcion es obligatoria.")
 
-    # CALCULA EL COSTO FINAL CON DESCUENTOS E IMPUESTOS
-    def calcular_total(self, costo, descuento=0, impuesto=0):
+        # VALIDAR PRECIO
 
-        # VALIDA QUE LOS VALORES SEAN NUMERICOS
-        valores = [costo, descuento, impuesto]
-
-        if any(
-            isinstance(valor, bool) or not isinstance(valor, (int, float))
-            for valor in valores
+        if (
+            isinstance(precio_base, bool)
+            or not isinstance(precio_base, (int, float))
+            or not math.isfinite(precio_base)
+            or precio_base <= 0
         ):
-            raise DatosInvalidosError(
-                "Los costos, descuentos e impuestos deben ser numericos."
-            )
+            raise ValueError("El precio debe ser un numero mayor que cero.")
 
-        # VALIDA QUE LOS VALORES NO SEAN NEGATIVOS
-        if costo <= 0 or descuento < 0 or impuesto < 0:
-            raise DatosInvalidosError(
-                "Los valores deben ser positivos o cero segun corresponda."
-            )
+        # VALIDAR DISPONIBILIDAD
 
-        # VALIDA LOS PORCENTAJES
-        if descuento > 100 or impuesto > 100:
-            raise DatosInvalidosError(
-                "Los porcentajes no pueden superar el 100 por ciento."
-            )
+        if not isinstance(disponible, bool):
+            raise ValueError("La disponibilidad debe ser verdadera o falsa.")
 
-        # CALCULA EL DESCUENTO
-        valor_descuento = costo * (descuento / 100)
+        self.identificador = identificador
+        self.nombre = nombre.strip()
+        self.descripcion = descripcion.strip()
+        self.precio_base = precio_base
+        self.disponible = disponible
 
-        subtotal = costo - valor_descuento
+        logging.info("Servicio creado: %s", self.nombre)
 
-        # CALCULA EL IMPUESTO
-        valor_impuesto = subtotal * (impuesto / 100)
+    # =================================================
+    # METODO ABSTRACTO
+    # =================================================
 
-        # CALCULA EL COSTO FINAL
-        total = subtotal + valor_impuesto
-
-        return round(total, 2)
-
-    # METODO ABSTRACTO PARA VALIDAR PARAMETROS ESPECIFICOS
     @abstractmethod
-    def validar_parametros(self):
+    def calcular_costo(self, duracion):
         pass
 
-    # METODO ABSTRACTO PARA CALCULAR EL COSTO DEL SERVICIO
-    @abstractmethod
-    def calcular_costo(self, duracion, descuento=0, impuesto=0):
-        pass
+    # =================================================
+    # VALIDAR DURACION
+    # =================================================
 
-    # METODO ABSTRACTO PARA DESCRIBIR EL SERVICIO
-    @abstractmethod
-    def describir_servicio(self):
-        pass
+    @staticmethod
+    def validar_duracion(duracion):
 
-
-# CLASE QUE REPRESENTA EL SERVICIO DE RESERVA DE SALAS
-class ReservaSala(Servicio):
-
-    # CONSTRUCTOR DE LA CLASE RESERVA SALA
-    def __init__(
-        self,
-        identificador,
-        nombre,
-        descripcion,
-        precio_base,
-        capacidad,
-        disponible=True,
-    ):
-
-        # INICIALIZA LOS ATRIBUTOS DE LA CLASE PADRE
-        self.__capacidad = capacidad
-
-        super().__init__(identificador, nombre, descripcion, precio_base, disponible)
-
-    # VALIDA LOS PARAMETROS DE LA SALA
-    def validar_parametros(self):
-
-        if isinstance(self.__capacidad, bool) or not isinstance(self.__capacidad, int):
-            raise DatosInvalidosError(
-                "La capacidad de la sala debe ser un numero entero."
-            )
-
-        if self.__capacidad <= 0:
-            raise DatosInvalidosError(
-                "La capacidad de la sala debe ser mayor que cero."
-            )
-
-    # CONSULTA LA CAPACIDAD DE LA SALA
-    @property
-    def capacidad(self):
-        return self.__capacidad
-
-    # CALCULA EL COSTO DE RESERVAR UNA SALA
-    def calcular_costo(self, duracion, descuento=0, impuesto=0):
-
-        # VALIDA LA DURACION
         if (
             isinstance(duracion, bool)
             or not isinstance(duracion, (int, float))
+            or not math.isfinite(duracion)
             or duracion <= 0
         ):
-            raise DatosInvalidosError(
-                "La duracion de la reserva debe ser mayor que cero."
-            )
+            raise ValueError("La duracion debe ser un numero finito mayor que cero.")
 
-        # VERIFICA LA DISPONIBILIDAD
-        if not self.disponible:
-            raise ServicioNoDisponibleError("La sala seleccionada no esta disponible.")
+        return True
 
-        # CALCULA EL COSTO POR HORA
-        costo = self.precio_base * duracion
+    # =================================================
+    # VALIDAR PORCENTAJES
+    # =================================================
 
-        return self.calcular_total(costo, descuento, impuesto)
+    @staticmethod
+    def validar_porcentaje(valor, nombre):
 
-    # DESCRIBE LAS CARACTERISTICAS DE LA SALA
-    def describir_servicio(self):
+        if (
+            isinstance(valor, bool)
+            or not isinstance(valor, (int, float))
+            or not math.isfinite(valor)
+            or not 0 <= valor <= 100
+        ):
+            raise ValueError(f"El porcentaje de {nombre} debe estar entre 0 y 100.")
+
+        return True
+
+    # =================================================
+    # CALCULAR DETALLE DEL PAGO
+    # =================================================
+
+    def calcular_detalle_pago(self, costo_base, descuento=0, impuesto=None):
+
+        if (
+            isinstance(costo_base, bool)
+            or not isinstance(costo_base, (int, float))
+            or not math.isfinite(costo_base)
+            or costo_base < 0
+        ):
+            raise ValueError("El costo base no es valido.")
+
+        if impuesto is None:
+            impuesto = self.IVA
+
+        self.validar_porcentaje(descuento, "descuento")
+        self.validar_porcentaje(impuesto, "impuesto")
+
+        # CALCULAR DESCUENTO
+
+        valor_descuento = costo_base * descuento / 100
+
+        # CALCULAR SUBTOTAL
+
+        subtotal = costo_base - valor_descuento
+
+        # CALCULAR IVA
+
+        valor_impuesto = subtotal * impuesto / 100
+
+        # CALCULAR TOTAL
+
+        total = subtotal + valor_impuesto
+
+        logging.info(
+            "Pago calculado para servicio %s. Total: %.2f", self.identificador, total
+        )
+
+        return {
+            "costo_base": costo_base,
+            "descuento_porcentaje": descuento,
+            "valor_descuento": valor_descuento,
+            "subtotal": subtotal,
+            "impuesto_porcentaje": impuesto,
+            "valor_impuesto": valor_impuesto,
+            "total": total,
+            "total_pagar": total,
+        }
+
+    # =================================================
+    # MOSTRAR INFORMACION
+    # =================================================
+
+    def mostrar_informacion(self):
 
         return (
-            f"Servicio: {self.nombre}\n"
-            f"Tipo: Reserva de sala\n"
+            f"ID: {self.identificador}\n"
+            f"Nombre: {self.nombre}\n"
             f"Descripcion: {self.descripcion}\n"
-            f"Capacidad: {self.__capacidad} personas\n"
-            f"Precio por hora: ${self.precio_base}\n"
+            f"Precio base: ${self.precio_base:,.2f}\n"
+            f"IVA: {self.IVA}%\n"
             f"Disponible: {self.disponible}"
         )
 
 
-# CLASE QUE REPRESENTA EL ALQUILER DE EQUIPOS TECNOLOGICOS
+# =====================================================
+# RESERVA DE SALAS
+# =====================================================
+
+
+class ReservaSala(Servicio):
+
+    def __init__(self, identificador, nombre, descripcion, precio_base, capacidad):
+
+        super().__init__(identificador, nombre, descripcion, precio_base)
+
+        if (
+            isinstance(capacidad, bool)
+            or not isinstance(capacidad, int)
+            or capacidad <= 0
+        ):
+            raise ValueError("La capacidad debe ser un entero mayor que cero.")
+
+        self.capacidad = capacidad
+
+    # CALCULAR COSTO
+
+    def calcular_costo(self, duracion, descuento=0, impuesto=None):
+
+        self.validar_duracion(duracion)
+
+        costo_base = self.precio_base * duracion
+
+        detalle = self.calcular_detalle_pago(costo_base, descuento, impuesto)
+
+        return detalle["total_pagar"]
+
+    # MOSTRAR INFORMACION
+
+    def mostrar_informacion(self):
+
+        return super().mostrar_informacion() + f"\nCapacidad: {self.capacidad} personas"
+
+
+# =====================================================
+# ALQUILER DE EQUIPOS
+# =====================================================
 
 
 class AlquilerEquipo(Servicio):
 
-    # CONSTRUCTOR DE LA CLASE ALQUILER DE EQUIPO
     def __init__(
-        self,
-        identificador,
-        nombre,
-        descripcion,
-        precio_base,
-        equipo,
-        cantidad,
-        disponible=True,
+        self, identificador, nombre, descripcion, precio_base, cantidad_disponible
     ):
 
-        # INICIALIZA LOS ATRIBUTOS ESPECIFICOS
-        self.__equipo = equipo
-        self.__cantidad = cantidad
+        super().__init__(identificador, nombre, descripcion, precio_base)
 
-        # INICIALIZA LOS ATRIBUTOS DE LA CLASE PADRE
-        super().__init__(identificador, nombre, descripcion, precio_base, disponible)
-
-    # VALIDA LOS PARAMETROS DEL EQUIPO
-    def validar_parametros(self):
-
-        if not isinstance(self.__equipo, str) or not self.__equipo.strip():
-            raise DatosInvalidosError("El nombre del equipo es obligatorio.")
-
-        if isinstance(self.__cantidad, bool) or not isinstance(self.__cantidad, int):
-            raise DatosInvalidosError("La cantidad debe ser un numero entero.")
-
-        if self.__cantidad <= 0:
-            raise DatosInvalidosError("La cantidad debe ser mayor que cero.")
-
-    # CONSULTA EL NOMBRE DEL EQUIPO
-    @property
-    def equipo(self):
-        return self.__equipo
-
-    # CONSULTA LA CANTIDAD DE EQUIPOS
-    @property
-    def cantidad(self):
-        return self.__cantidad
-
-    # CALCULA EL COSTO DEL ALQUILER DE EQUIPOS
-    def calcular_costo(self, duracion, descuento=0, impuesto=0):
-
-        # VALIDA LA DURACION DEL ALQUILER
         if (
-            isinstance(duracion, bool)
-            or not isinstance(duracion, (int, float))
-            or duracion <= 0
+            isinstance(cantidad_disponible, bool)
+            or not isinstance(cantidad_disponible, int)
+            or cantidad_disponible < 0
         ):
-            raise DatosInvalidosError(
-                "La duracion del alquiler debe ser mayor que cero."
-            )
+            raise ValueError("La cantidad disponible debe ser un entero no negativo.")
 
-        # VERIFICA LA DISPONIBILIDAD DEL SERVICIO
-        if not self.disponible:
-            raise ServicioNoDisponibleError("El equipo solicitado no esta disponible.")
+        self.cantidad_disponible = cantidad_disponible
 
-        # CALCULA EL COSTO SEGUN CANTIDAD Y DURACION
-        costo = self.precio_base * self.__cantidad * duracion
+    # CALCULAR COSTO
 
-        return self.calcular_total(costo, descuento, impuesto)
+    def calcular_costo(self, duracion, descuento=0, impuesto=None, cantidad=1):
 
-    # DESCRIBE LAS CARACTERISTICAS DEL EQUIPO
-    def describir_servicio(self):
+        self.validar_duracion(duracion)
+
+        if isinstance(cantidad, bool) or not isinstance(cantidad, int) or cantidad <= 0:
+            raise ValueError("La cantidad debe ser un entero mayor que cero.")
+
+        if cantidad > self.cantidad_disponible:
+            raise ValueError("No hay suficientes equipos disponibles.")
+
+        costo_base = self.precio_base * duracion * cantidad
+
+        detalle = self.calcular_detalle_pago(costo_base, descuento, impuesto)
+
+        return detalle["total_pagar"]
+
+    # MOSTRAR INFORMACION
+
+    def mostrar_informacion(self):
 
         return (
-            f"Servicio: {self.nombre}\n"
-            f"Tipo: Alquiler de equipo\n"
-            f"Equipo: {self.__equipo}\n"
-            f"Cantidad: {self.__cantidad}\n"
-            f"Precio por unidad y hora: ${self.precio_base}\n"
-            f"Disponible: {self.disponible}"
+            super().mostrar_informacion()
+            + f"\nCantidad disponible: {self.cantidad_disponible}"
         )
 
 
-# CLASE QUE REPRESENTA LAS ASESORIAS ESPECIALIZADAS
+# =====================================================
+# ASESORIAS ESPECIALIZADAS
+# =====================================================
 
 
 class Asesoria(Servicio):
 
-    # CONSTRUCTOR DE LA CLASE ASESORIA
-    def __init__(
-        self,
-        identificador,
-        nombre,
-        descripcion,
-        precio_base,
-        especialidad,
-        disponible=True,
-    ):
+    def __init__(self, identificador, nombre, descripcion, precio_base, especialidad):
 
-        # GUARDA LA ESPECIALIDAD DE LA ASESORIA
-        self.__especialidad = especialidad
+        super().__init__(identificador, nombre, descripcion, precio_base)
 
-        # INICIALIZA LOS ATRIBUTOS DE LA CLASE PADRE
-        super().__init__(identificador, nombre, descripcion, precio_base, disponible)
+        if not isinstance(especialidad, str) or not especialidad.strip():
+            raise ValueError("La especialidad es obligatoria.")
 
-    # VALIDA LOS PARAMETROS DE LA ASESORIA
-    def validar_parametros(self):
+        self.especialidad = especialidad.strip()
 
-        if not isinstance(self.__especialidad, str) or not self.__especialidad.strip():
-            raise DatosInvalidosError("La especialidad de la asesoria es obligatoria.")
+    # CALCULAR COSTO
 
-    # CONSULTA LA ESPECIALIDAD DE LA ASESORIA
-    @property
-    def especialidad(self):
-        return self.__especialidad
+    def calcular_costo(self, duracion, descuento=0, impuesto=None):
 
-    # CALCULA EL COSTO DE LA ASESORIA
-    def calcular_costo(self, duracion, descuento=0, impuesto=0):
+        self.validar_duracion(duracion)
 
-        # VALIDA LA DURACION DE LA ASESORIA
-        if (
-            isinstance(duracion, bool)
-            or not isinstance(duracion, (int, float))
-            or duracion <= 0
-        ):
-            raise DatosInvalidosError(
-                "La duracion de la asesoria debe ser mayor que cero."
-            )
+        costo_base = self.precio_base * duracion
 
-        # VERIFICA LA DISPONIBILIDAD
-        if not self.disponible:
-            raise ServicioNoDisponibleError(
-                "La asesoria solicitada no esta disponible."
-            )
+        detalle = self.calcular_detalle_pago(costo_base, descuento, impuesto)
 
-        # CALCULA EL COSTO SEGUN LAS HORAS CONTRATADAS
-        costo = self.precio_base * duracion
+        return detalle["total_pagar"]
 
-        return self.calcular_total(costo, descuento, impuesto)
+    # MOSTRAR INFORMACION
 
-    # DESCRIBE LAS CARACTERISTICAS DE LA ASESORIA
-    def describir_servicio(self):
+    def mostrar_informacion(self):
 
-        return (
-            f"Servicio: {self.nombre}\n"
-            f"Tipo: Asesoria especializada\n"
-            f"Especialidad: {self.__especialidad}\n"
-            f"Descripcion: {self.descripcion}\n"
-            f"Precio por hora: ${self.precio_base}\n"
-            f"Disponible: {self.disponible}"
-        )
+        return super().mostrar_informacion() + f"\nEspecialidad: {self.especialidad}"

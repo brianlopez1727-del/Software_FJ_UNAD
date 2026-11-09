@@ -6,62 +6,70 @@ la estructura y los comportamientos generales de las entidades
 que forman parte del sistema de clientes, servicios y reservas.
 """
 
-# IMPORTA LAS HERRAMIENTAS PARA CREAR CLASES ABSTRACTAS
-
 from abc import ABC, abstractmethod
-
-# IMPORTA LA FECHA Y HORA ACTUAL DEL SISTEMA
-
 from datetime import datetime
-
-# CLASE ABSTRACTA QUE REPRESENTA LAS ENTIDADES GENERALES DEL SISTEMA
 
 
 class Entidad(ABC):
 
-    # CONSTRUCTOR DE LA CLASE ENTIDAD
     def __init__(self, identificador, nombre):
 
-        # VALIDACION DEL IDENTIFICADOR
-        if not identificador:
+        # VALIDAR IDENTIFICADOR
+
+        if identificador is None:
             raise ValueError("El identificador es obligatorio.")
 
-        # VALIDACION DEL NOMBRE
+        if isinstance(identificador, bool):
+            raise ValueError("El identificador no puede ser booleano.")
+
+        if isinstance(identificador, str) and not identificador.strip():
+            raise ValueError("El identificador no puede estar vacio.")
+
+        if not isinstance(identificador, (int, str)):
+            raise ValueError("El identificador debe ser texto o un entero.")
+
+        if isinstance(identificador, int) and identificador <= 0:
+            raise ValueError("El identificador debe ser mayor que cero.")
+
+        # VALIDAR NOMBRE
+
         if not isinstance(nombre, str) or not nombre.strip():
             raise ValueError("El nombre no puede estar vacio.")
 
-        # ATRIBUTOS ENCAPSULADOS DE LA ENTIDAD
+        # ATRIBUTOS ENCAPSULADOS
+
         self._identificador = identificador
         self._nombre = nombre.strip()
         self._fecha_creacion = datetime.now()
 
-    # CONSULTA EL IDENTIFICADOR DE LA ENTIDAD
+    # PROPIEDADES
+
     @property
     def identificador(self):
         return self._identificador
 
-    # CONSULTA EL NOMBRE DE LA ENTIDAD
     @property
     def nombre(self):
         return self._nombre
 
-    # CONSULTA LA FECHA DE CREACION DE LA ENTIDAD
     @property
     def fecha_creacion(self):
         return self._fecha_creacion
 
-    # METODO ABSTRACTO PARA MOSTRAR LA INFORMACION DE LA ENTIDAD
+    # METODO ABSTRACTO
+
     @abstractmethod
     def mostrar_informacion(self):
         pass
 
-    # METODO ABSTRACTO PARA VALIDAR LOS DATOS DE LA ENTIDAD
     @abstractmethod
     def validar_datos(self):
         pass
 
-    # REPRESENTACION GENERAL DE LA ENTIDAD
+    # REPRESENTACION DEL OBJETO
+
     def __str__(self):
+
         return (
             f"Identificador: {self._identificador} | "
             f"Nombre: {self._nombre} | "

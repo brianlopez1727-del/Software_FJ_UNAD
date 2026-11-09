@@ -1,0 +1,757 @@
+2026-10-31 17:19:41,118 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 17:19:41,118 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 17:21:20,124 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 17:21:20,125 - INFO - Cliente registrado: 1
+2026-10-31 17:21:20,125 - INFO - Servicio registrado: 101
+2026-10-31 17:21:20,125 - INFO - Servicio registrado: 102
+2026-10-31 17:21:20,125 - INFO - Servicio registrado: 103
+2026-10-31 17:21:20,125 - INFO - Reserva creada: 201
+2026-10-31 17:21:20,126 - WARNING - No se encontro el cliente: 999
+2026-10-31 17:21:20,126 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 168, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 113, in buscar_cliente
+    raise ClienteNoEncontradoError()
+excepciones.ClienteNoEncontradoError: El cliente solicitado no existe.
+2026-10-31 17:21:20,132 - INFO - Reserva confirmada: 201
+2026-10-31 17:21:20,132 - INFO - Reserva cancelada: 201
+2026-10-31 17:21:20,132 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 210, in confirmar_reserva
+    resultado = reserva.confirmar()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 130, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 17:21:20,133 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 17:21:21,857 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 17:21:21,857 - INFO - Cliente registrado: 1
+2026-10-31 17:21:21,858 - INFO - Servicio registrado: 101
+2026-10-31 17:21:21,858 - INFO - Servicio registrado: 102
+2026-10-31 17:21:21,858 - INFO - Servicio registrado: 103
+2026-10-31 17:21:21,859 - INFO - Reserva creada: 201
+2026-10-31 17:21:21,859 - WARNING - No se encontro el cliente: 999
+2026-10-31 17:21:21,859 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 168, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 113, in buscar_cliente
+    raise ClienteNoEncontradoError()
+excepciones.ClienteNoEncontradoError: El cliente solicitado no existe.
+2026-10-31 17:21:21,866 - INFO - Reserva confirmada: 201
+2026-10-31 17:21:21,867 - INFO - Reserva cancelada: 201
+2026-10-31 17:21:21,867 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 210, in confirmar_reserva
+    resultado = reserva.confirmar()
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 130, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 17:21:21,869 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 17:21:30,100 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 17:21:30,100 - INFO - Cliente registrado: 1
+2026-10-31 17:21:30,101 - INFO - Servicio registrado: 101
+2026-10-31 17:21:30,101 - INFO - Servicio registrado: 102
+2026-10-31 17:21:30,101 - INFO - Servicio registrado: 103
+2026-10-31 17:21:30,101 - INFO - Reserva creada: 201
+2026-10-31 17:21:30,102 - WARNING - No se encontro el cliente: 999
+2026-10-31 17:21:30,102 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 168, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 113, in buscar_cliente
+    raise ClienteNoEncontradoError()
+excepciones.ClienteNoEncontradoError: El cliente solicitado no existe.
+2026-10-31 17:21:30,107 - INFO - Reserva confirmada: 201
+2026-10-31 17:21:30,107 - INFO - Reserva cancelada: 201
+2026-10-31 17:21:30,107 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 210, in confirmar_reserva
+    resultado = reserva.confirmar()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 130, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 17:21:30,108 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 17:25:14,297 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 17:25:14,298 - INFO - Cliente registrado: 1
+2026-10-31 17:25:14,299 - ERROR - Operacion 2: El correo electronico no tiene un formato valido.
+2026-10-31 17:25:14,299 - INFO - Servicio registrado: 101
+2026-10-31 17:25:14,299 - INFO - Servicio registrado: 102
+2026-10-31 17:25:14,300 - INFO - Servicio registrado: 103
+2026-10-31 17:25:14,300 - INFO - Reserva creada: 201
+2026-10-31 17:25:14,300 - WARNING - No se encontro el cliente: 999
+2026-10-31 17:25:14,301 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 168, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 113, in buscar_cliente
+    raise ClienteNoEncontradoError()
+excepciones.ClienteNoEncontradoError: El cliente solicitado no existe.
+2026-10-31 17:25:14,308 - ERROR - Operacion 7: El cliente solicitado no existe.
+2026-10-31 17:25:14,309 - INFO - Reserva confirmada: 201
+2026-10-31 17:25:14,309 - INFO - Reserva cancelada: 201
+2026-10-31 17:25:14,309 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 210, in confirmar_reserva
+    resultado = reserva.confirmar()
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 130, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 17:25:14,311 - ERROR - Operacion 10: Solo se pueden confirmar reservas pendientes.
+2026-10-31 17:25:14,311 - ERROR - Servicio no disponible: La sala seleccionada no esta disponible.
+2026-10-31 17:25:14,312 - ERROR - Duracion invalida: La duracion de la reserva debe ser mayor que cero.
+2026-10-31 17:25:14,312 - ERROR - Error de conversion: invalid literal for int() with base 10: 'Software FJ'
+2026-10-31 17:25:14,312 - INFO - Conversion numerica realizada correctamente.
+2026-10-31 17:25:14,313 - ERROR - Intento de division entre cero: division by zero
+2026-10-31 17:25:14,313 - INFO - Finalizacion de prueba FINALLY.
+2026-10-31 17:25:14,313 - ERROR - Prueba de encadenamiento de excepciones.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 105, in probar_excepciones_avanzadas
+    int("Dato incorrecto")
+    ~~~^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'Dato incorrecto'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 109, in probar_excepciones_avanzadas
+    raise DatosInvalidosError(
+        "No fue posible procesar el dato ingresado."
+    ) from error
+excepciones.DatosInvalidosError: No fue posible procesar el dato ingresado.
+2026-10-31 17:25:14,316 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 18:45:23,055 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 18:46:35,544 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 18:46:35,545 - INFO - Interfaz grafica cerrada.
+2026-10-31 18:56:07,013 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 18:56:11,641 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 18:56:11,641 - INFO - Interfaz grafica cerrada.
+2026-10-31 18:56:13,803 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 18:56:13,804 - INFO - Cliente registrado correctamente: 1
+2026-10-31 18:56:13,804 - INFO - Finalizo el proceso de registro de cliente.
+2026-10-31 18:56:13,804 - ERROR - Operacion 2: El correo electronico no tiene un formato valido.
+2026-10-31 18:56:13,804 - INFO - Servicio registrado correctamente: 101
+2026-10-31 18:56:13,804 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 18:56:13,804 - INFO - Servicio registrado correctamente: 102
+2026-10-31 18:56:13,805 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 18:56:13,805 - INFO - Servicio registrado correctamente: 103
+2026-10-31 18:56:13,805 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 18:56:13,805 - INFO - Reserva creada correctamente: 201
+2026-10-31 18:56:13,805 - INFO - Reserva creada correctamente: 201
+2026-10-31 18:56:13,805 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 18:56:13,805 - ERROR - Error al buscar cliente.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 129, in buscar_cliente
+    raise ClienteNoEncontradoError("No se encontro el cliente solicitado.")
+excepciones.ClienteNoEncontradoError: No se encontro el cliente solicitado.
+2026-10-31 18:56:13,810 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 256, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 129, in buscar_cliente
+    raise ClienteNoEncontradoError("No se encontro el cliente solicitado.")
+excepciones.ClienteNoEncontradoError: No se encontro el cliente solicitado.
+2026-10-31 18:56:13,810 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 18:56:13,810 - ERROR - Operacion 7: No se encontro el cliente solicitado.
+2026-10-31 18:56:13,810 - INFO - Reserva confirmada correctamente: 201
+2026-10-31 18:56:13,810 - INFO - Finalizo el proceso de confirmacion de la reserva 201.
+2026-10-31 18:56:13,810 - INFO - Reserva confirmada desde el sistema: 201
+2026-10-31 18:56:13,810 - INFO - Finalizo el proceso de confirmacion de reserva.
+2026-10-31 18:56:13,810 - INFO - Reserva cancelada correctamente: 201
+2026-10-31 18:56:13,810 - INFO - Finalizo el proceso de cancelacion de la reserva 201.
+2026-10-31 18:56:13,810 - INFO - Reserva cancelada desde el sistema: 201
+2026-10-31 18:56:13,810 - INFO - Finalizo el proceso de cancelacion de reserva.
+2026-10-31 18:56:13,811 - ERROR - Error al confirmar la reserva 201.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 151, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 18:56:13,811 - INFO - Finalizo el proceso de confirmacion de la reserva 201.
+2026-10-31 18:56:13,811 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 334, in confirmar_reserva
+    resultado = reserva.confirmar()
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 151, in confirmar
+    raise OperacionNoPermitidaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+excepciones.OperacionNoPermitidaError: Solo se pueden confirmar reservas pendientes.
+2026-10-31 18:56:13,812 - INFO - Finalizo el proceso de confirmacion de reserva.
+2026-10-31 18:56:13,812 - ERROR - Operacion 10: Solo se pueden confirmar reservas pendientes.
+2026-10-31 18:56:13,812 - ERROR - Servicio no disponible: La sala seleccionada no esta disponible.
+2026-10-31 18:56:13,812 - ERROR - Duracion invalida: La duracion de la reserva debe ser mayor que cero.
+2026-10-31 18:56:13,812 - ERROR - Error de conversion: invalid literal for int() with base 10: 'Software FJ'
+2026-10-31 18:56:13,813 - INFO - Conversion numerica realizada correctamente.
+2026-10-31 18:56:13,813 - ERROR - Intento de division entre cero: division by zero
+2026-10-31 18:56:13,813 - INFO - Finalizacion de prueba FINALLY.
+2026-10-31 18:56:13,813 - ERROR - Prueba de encadenamiento de excepciones.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 108, in probar_excepciones_avanzadas
+    int("Dato incorrecto")
+    ~~~^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'Dato incorrecto'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 111, in probar_excepciones_avanzadas
+    raise DatosInvalidosError(
+        "No fue posible procesar el dato ingresado."
+    ) from error
+excepciones.DatosInvalidosError: No fue posible procesar el dato ingresado.
+2026-10-31 18:56:13,815 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 19:24:32,366 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:25:38,897 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 19:25:38,897 - INFO - Interfaz grafica cerrada.
+2026-10-31 19:28:45,406 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:28:48,993 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 19:28:48,993 - INFO - Interfaz grafica cerrada.
+2026-10-31 19:30:13,724 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:33:54,640 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 19:33:54,640 - INFO - Interfaz grafica cerrada.
+2026-10-31 19:39:20,444 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:39:26,446 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 19:39:26,446 - INFO - Interfaz grafica cerrada.
+2026-10-31 19:40:10,791 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:40:20,966 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:43:48,467 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 19:44:18,302 - INFO - Cliente registrado correctamente: 1
+2026-10-31 19:44:18,302 - INFO - Finalizo el proceso de registro de cliente.
+2026-10-31 19:44:52,423 - INFO - Servicio registrado correctamente: 1
+2026-10-31 19:44:52,423 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 19:44:52,423 - INFO - Servicio registrado correctamente.
+2026-10-31 19:45:20,430 - INFO - Reserva creada correctamente: 1
+2026-10-31 19:45:20,430 - INFO - Reserva creada correctamente: 1
+2026-10-31 19:45:20,430 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 19:45:20,430 - INFO - Reserva creada desde la interfaz: 1
+2026-10-31 21:15:18,042 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 21:15:39,739 - INFO - Cliente registrado correctamente: 1
+2026-10-31 21:15:39,739 - INFO - Finalizo el proceso de registro de cliente.
+2026-10-31 21:16:08,091 - INFO - Servicio registrado correctamente: 1
+2026-10-31 21:16:08,091 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 21:16:08,091 - INFO - Servicio registrado correctamente.
+2026-10-31 21:16:26,506 - INFO - Reserva creada correctamente: 2
+2026-10-31 21:16:26,506 - INFO - Reserva creada correctamente: 2
+2026-10-31 21:16:26,506 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 21:16:26,506 - INFO - Reserva creada desde la interfaz: 2
+2026-10-31 21:16:52,363 - INFO - Servicio registrado correctamente: 3
+2026-10-31 21:16:52,363 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 21:16:52,363 - INFO - Servicio registrado correctamente.
+2026-10-31 21:25:46,482 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 21:26:09,963 - INFO - Servicio registrado correctamente: 1
+2026-10-31 21:26:09,963 - INFO - Finalizo el proceso de registro de servicio.
+2026-10-31 21:26:09,963 - INFO - Servicio registrado correctamente.
+2026-10-31 21:26:47,730 - INFO - Cliente registrado correctamente: 1
+2026-10-31 21:26:47,731 - INFO - Finalizo el proceso de registro de cliente.
+2026-10-31 21:27:07,059 - INFO - Reserva creada correctamente: 3
+2026-10-31 21:27:07,059 - INFO - Reserva creada correctamente: 3
+2026-10-31 21:27:07,059 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 21:27:07,059 - INFO - Reserva creada desde la interfaz: 3
+2026-10-31 21:27:08,074 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 250, in crear_reserva
+    raise OperacionNoPermitidaError(
+        "Ya existe una reserva con ese identificador."
+    )
+excepciones.OperacionNoPermitidaError: Ya existe una reserva con ese identificador.
+2026-10-31 21:27:08,075 - INFO - Finalizo el proceso de creacion de reserva.
+2026-10-31 21:27:08,075 - ERROR - Error al crear reserva desde la interfaz.
+Traceback (most recent call last):
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 747, in guardar_reserva
+    reserva = self.sistema.crear_reserva(
+        identificador, id_cliente, id_servicio, duracion
+    )
+  File "C:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 250, in crear_reserva
+    raise OperacionNoPermitidaError(
+        "Ya existe una reserva con ese identificador."
+    )
+excepciones.OperacionNoPermitidaError: Ya existe una reserva con ese identificador.
+2026-10-31 21:27:17,232 - INFO - Sistema Software FJ finalizado correctamente.
+2026-10-31 21:44:48,830 - INFO - Sistema Software FJ iniciado correctamente.
+2026-10-31 21:44:58,864 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-02 21:28:02,401 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-02 21:28:42,322 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 15:28:20,584 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 15:29:15,671 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 22:18:12,224 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 22:19:56,136 - ERROR - Error al registrar cliente desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 340, in registrar_cliente_interfaz
+    nuevo_cliente = Cliente(
+        identificador, nombre, apellido, documento, telefono, correo
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\clientes.py", line 39, in __init__
+    self.validar_datos()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\clientes.py", line 82, in validar_datos
+    raise DatosInvalidosError("El telefono debe contener entre 7 y 15 digitos.")
+excepciones.DatosInvalidosError: El telefono debe contener entre 7 y 15 digitos.
+2026-11-08 22:20:04,577 - INFO - Cliente registrado correctamente: 1
+2026-11-08 22:20:04,577 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 22:22:38,536 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 22:33:21,342 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 22:33:56,968 - INFO - Cliente registrado correctamente: 1
+2026-11-08 22:33:56,968 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 22:34:23,761 - INFO - Servicio registrado correctamente: 1
+2026-11-08 22:34:23,761 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 22:34:23,761 - INFO - Servicio registrado correctamente.
+2026-11-08 22:34:47,378 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 22:35:21,450 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 22:35:45,431 - INFO - Cliente registrado correctamente: 1
+2026-11-08 22:35:45,432 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 22:36:22,289 - INFO - Servicio registrado correctamente: 1
+2026-11-08 22:36:22,289 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 22:36:22,289 - INFO - Servicio registrado correctamente.
+2026-11-08 22:36:43,600 - INFO - Reserva creada correctamente: 1
+2026-11-08 22:36:43,601 - INFO - Reserva creada correctamente: 1
+2026-11-08 22:36:43,601 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 22:36:43,601 - INFO - Reserva creada desde la interfaz: 1
+2026-11-08 22:52:17,782 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 22:54:38,437 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 22:55:02,607 - INFO - Cliente registrado correctamente: 1
+2026-11-08 22:55:02,607 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 22:55:47,305 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:11:55,162 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:13:32,085 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:13:32,107 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 309, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 41, in __init__
+    self.protocol("WM_DELETE_WINDOW", self.cerrar_aplicacion)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'cerrar_aplicacion'
+2026-11-08 23:13:39,207 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:13:39,231 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 309, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 41, in __init__
+    self.protocol("WM_DELETE_WINDOW", self.cerrar_aplicacion)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'cerrar_aplicacion'
+2026-11-08 23:13:44,776 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:13:44,805 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 309, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 41, in __init__
+    self.protocol("WM_DELETE_WINDOW", self.cerrar_aplicacion)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'cerrar_aplicacion'
+2026-11-08 23:20:07,106 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:20:07,111 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 309, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 38, in __init__
+    self.crear_menu_lateral()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 73, in crear_menu_lateral
+    ("Reservas", self.mostrar_reservas),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'mostrar_reservas'
+2026-11-08 23:20:19,068 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:20:19,073 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 309, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 38, in __init__
+    self.crear_menu_lateral()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 73, in crear_menu_lateral
+    ("Reservas", self.mostrar_reservas),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'mostrar_reservas'
+2026-11-08 23:25:45,231 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:26:11,414 - INFO - Cliente registrado correctamente: 1
+2026-11-08 23:26:11,414 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:26:11,414 - INFO - Cliente registrado desde la interfaz: 1
+2026-11-08 23:26:53,726 - ERROR - Error al registrar servicio desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 615, in registrar_servicio_interfaz
+    servicio = AlquilerEquipo(
+        identificador, nombre, descripcion, precio, equipo, cantidad
+    )
+TypeError: AlquilerEquipo.__init__() takes 6 positional arguments but 7 were given
+2026-11-08 23:26:58,725 - ERROR - Error al registrar servicio desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 615, in registrar_servicio_interfaz
+    servicio = AlquilerEquipo(
+        identificador, nombre, descripcion, precio, equipo, cantidad
+    )
+TypeError: AlquilerEquipo.__init__() takes 6 positional arguments but 7 were given
+2026-11-08 23:27:04,111 - ERROR - Error al registrar servicio desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 615, in registrar_servicio_interfaz
+    servicio = AlquilerEquipo(
+        identificador, nombre, descripcion, precio, equipo, cantidad
+    )
+TypeError: AlquilerEquipo.__init__() takes 6 positional arguments but 7 were given
+2026-11-08 23:27:07,214 - ERROR - Error al registrar servicio desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 615, in registrar_servicio_interfaz
+    servicio = AlquilerEquipo(
+        identificador, nombre, descripcion, precio, equipo, cantidad
+    )
+TypeError: AlquilerEquipo.__init__() takes 6 positional arguments but 7 were given
+2026-11-08 23:28:29,527 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:28:29,527 - INFO - Software FJ cerrado correctamente.
+2026-11-08 23:33:45,656 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:34:13,718 - INFO - Cliente registrado correctamente: 1
+2026-11-08 23:34:13,718 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:34:13,718 - INFO - Cliente registrado desde la interfaz: 1
+2026-11-08 23:34:44,302 - INFO - Servicio registrado correctamente: 1
+2026-11-08 23:34:44,302 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 23:34:44,302 - INFO - Servicio registrado desde la interfaz: 1
+2026-11-08 23:35:34,966 - ERROR - Error al calcular el costo de la reserva 1.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+2026-11-08 23:35:34,967 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:35:34,968 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 23:35:34,968 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 787, in registrar_reserva_interfaz
+    resultado = self.sistema.crear_reserva(
+        identificador, cliente_id, servicio_id, duracion
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:36:22,549 - INFO - Cliente registrado correctamente: 2
+2026-11-08 23:36:22,549 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:36:22,549 - INFO - Cliente registrado desde la interfaz: 2
+2026-11-08 23:36:52,390 - INFO - Servicio registrado correctamente: 2
+2026-11-08 23:36:52,390 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 23:36:52,390 - INFO - Servicio registrado desde la interfaz: 2
+2026-11-08 23:37:06,382 - ERROR - Error al calcular el costo de la reserva 2.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+2026-11-08 23:37:06,382 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:37:06,383 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 23:37:06,383 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 787, in registrar_reserva_interfaz
+    resultado = self.sistema.crear_reserva(
+        identificador, cliente_id, servicio_id, duracion
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:37:47,603 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:37:47,603 - INFO - Ventana principal cerrada correctamente.
+2026-11-08 23:37:50,247 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:38:10,997 - INFO - Cliente registrado correctamente: 1
+2026-11-08 23:38:10,997 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:38:10,997 - INFO - Cliente registrado desde la interfaz: 1
+2026-11-08 23:38:50,125 - INFO - Servicio registrado correctamente: 101
+2026-11-08 23:38:50,125 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 23:38:50,125 - INFO - Servicio registrado desde la interfaz: 101
+2026-11-08 23:39:05,278 - ERROR - Error al calcular el costo de la reserva 2.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+2026-11-08 23:39:05,279 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:39:05,279 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 23:39:05,279 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 787, in registrar_reserva_interfaz
+    resultado = self.sistema.crear_reserva(
+        identificador, cliente_id, servicio_id, duracion
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:39:12,582 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 778, in registrar_reserva_interfaz
+    duracion = int(self.campos_reserva["Duracion"].get().strip())
+ValueError: invalid literal for int() with base 10: '3 horas'
+2026-11-08 23:39:22,982 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 778, in registrar_reserva_interfaz
+    duracion = int(self.campos_reserva["Duracion"].get().strip())
+ValueError: invalid literal for int() with base 10: '1 hora'
+2026-11-08 23:41:04,839 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:41:04,839 - INFO - Ventana principal cerrada correctamente.
+2026-11-08 23:42:40,297 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:43:02,582 - INFO - Cliente registrado correctamente: 1
+2026-11-08 23:43:02,582 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:43:02,582 - INFO - Cliente registrado desde la interfaz: 1
+2026-11-08 23:43:23,997 - INFO - Servicio registrado correctamente: 2
+2026-11-08 23:43:23,997 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 23:43:23,997 - INFO - Servicio registrado desde la interfaz: 2
+2026-11-08 23:43:47,341 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 778, in registrar_reserva_interfaz
+    duracion = int(self.campos_reserva["Duracion"].get().strip())
+ValueError: invalid literal for int() with base 10: '1 hora'
+2026-11-08 23:44:26,493 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:44:26,493 - INFO - Ventana principal cerrada correctamente.
+2026-11-08 23:49:02,302 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:49:30,614 - INFO - Cliente registrado correctamente: 1
+2026-11-08 23:49:30,614 - INFO - Finalizo el proceso de registro de cliente.
+2026-11-08 23:49:30,614 - INFO - Cliente registrado desde la interfaz: 1
+2026-11-08 23:49:57,429 - ERROR - Error al registrar servicio desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 595, in registrar_servicio_interfaz
+    cantidad = int(
+        self.campos_especiales["Cantidad disponible"].get().strip()
+    )
+ValueError: invalid literal for int() with base 10: '6 horas'
+2026-11-08 23:50:01,469 - INFO - Servicio registrado correctamente: 2
+2026-11-08 23:50:01,469 - INFO - Finalizo el proceso de registro de servicio.
+2026-11-08 23:50:01,469 - INFO - Servicio registrado desde la interfaz: 2
+2026-11-08 23:50:47,517 - ERROR - Error al calcular el costo de la reserva 1.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+2026-11-08 23:50:47,518 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:50:47,519 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 23:50:47,519 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 804, in registrar_reserva_interfaz
+    resultado = self.sistema.crear_reserva(
+        identificador, cliente_id, servicio_id, duracion
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:50:52,174 - ERROR - Error al calcular el costo de la reserva 1.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+2026-11-08 23:50:52,174 - ERROR - Error al crear reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:50:52,175 - INFO - Finalizo el proceso de creacion de reserva.
+2026-11-08 23:50:52,175 - ERROR - Error al registrar reserva desde la interfaz.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 335, in __init__
+    self.__costo = self.__detalle_pago["total_pagar"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_pagar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 804, in registrar_reserva_interfaz
+    resultado = self.sistema.crear_reserva(
+        identificador, cliente_id, servicio_id, duracion
+    )
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 260, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\reservas.py", line 343, in __init__
+    raise ReservaInvalidaError(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible calcular el costo de la reserva.
+2026-11-08 23:52:09,604 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:52:09,604 - INFO - Ventana principal cerrada correctamente.
+2026-11-08 23:54:17,580 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-08 23:54:36,500 - INFO - Sistema Software FJ finalizado correctamente.
+2026-11-08 23:54:36,501 - INFO - Ventana principal cerrada correctamente.
+2026-11-09 00:12:20,282 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-09 00:12:20,288 - ERROR - Error al iniciar la interfaz grafica.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\main.py", line 372, in iniciar_interfaz
+    aplicacion = VentanaPrincipal()
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 97, in __init__
+    self.crear_menu_lateral()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 145, in crear_menu_lateral
+    ("♙  Clientes", self.mostrar_clientes),
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2557, in __getattr__
+    return getattr(self.tk, attr)
+AttributeError: '_tkinter.tkapp' object has no attribute 'mostrar_clientes'
+2026-11-09 00:16:03,951 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-09 00:16:04,100 - INFO - Dashboard actualizado.
+2026-11-09 00:16:04,100 - INFO - Interfaz grafica de Software FJ iniciada.
+2026-11-09 00:16:38,524 - INFO - Cliente registrado: 1
+2026-11-09 00:16:38,524 - INFO - Cliente registrado correctamente: 1
+2026-11-09 00:17:08,156 - INFO - Servicio creado: brian
+2026-11-09 00:17:08,156 - INFO - Servicio registrado: 1
+2026-11-09 00:17:08,156 - INFO - Servicio registrado: 1
+2026-11-09 00:17:25,637 - ERROR - Error al confirmar reserva.
+Traceback (most recent call last):
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\interfaz\ventana_principal.py", line 1097, in confirmar_reserva_interfaz
+    resultado = self.sistema.confirmar_reserva(identificador)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 210, in confirmar_reserva
+    reserva = self.buscar_reserva(identificador)
+  File "c:\Users\brian\Desktop\INGIENERIA DE SISTEMAS\2026\SEMESTRE 2\PROGRAMACION\fase 4\Software_FJ_UNAD PERSONAL\sistema.py", line 198, in buscar_reserva
+    raise ReservaInvalidaError("No existe una reserva con ese identificador.")
+excepciones.ReservaInvalidaError: No existe una reserva con ese identificador.
+2026-11-09 00:17:37,316 - INFO - Pago calculado para servicio 1. Total: 714000.00
+2026-11-09 00:17:37,316 - INFO - Reserva creada correctamente: 1
+2026-11-09 00:17:37,316 - INFO - Reserva creada: 1
+2026-11-09 00:17:37,316 - INFO - Reserva creada correctamente: 1
+2026-11-09 00:17:55,900 - INFO - Reserva confirmada: 1
+2026-11-09 00:17:55,900 - INFO - Finalizo la confirmacion de la reserva 1.
+2026-11-09 00:17:55,900 - INFO - Reserva confirmada: 1
+2026-11-09 00:17:55,900 - INFO - Reserva confirmada: 1
+2026-11-09 00:18:27,677 - INFO - Sistema Software FJ cerrado correctamente.
+2026-11-09 00:18:27,677 - INFO - Software FJ cerrado correctamente.
+2026-11-09 00:19:26,566 - INFO - Sistema Software FJ iniciado correctamente.
+2026-11-09 00:19:26,711 - INFO - Dashboard actualizado.
+2026-11-09 00:19:26,711 - INFO - Interfaz grafica de Software FJ iniciada.
+2026-11-09 00:19:33,282 - INFO - Sistema Software FJ cerrado correctamente.
+2026-11-09 00:19:33,283 - INFO - Software FJ cerrado correctamente.
