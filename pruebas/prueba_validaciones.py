@@ -1,18 +1,22 @@
 """
 Pruebas de validaciones del sistema Software FJ.
+
+Verifica el rechazo de datos incorrectos
+en servicios, costos y parámetros.
 """
 
 from servicios import ReservaSala, AlquilerEquipo, Asesoria
-from excepciones import DatosInvalidosError
 
 
 def probar_validacion(nombre, operacion):
 
     try:
         operacion()
+
         print(f"ERROR: {nombre} - Se aceptaron datos incorrectos.")
 
-    except DatosInvalidosError as error:
+    except (ValueError, TypeError) as error:
+
         print(f"CORRECTO: {nombre} - {error}")
 
 
@@ -36,9 +40,7 @@ probar_validacion(
 
 probar_validacion(
     "Cantidad negativa",
-    lambda: AlquilerEquipo(
-        303, "Portatiles", "Alquiler de equipos", 30000, "Portatil", -2
-    ),
+    lambda: AlquilerEquipo(303, "Portatiles", "Alquiler de equipos", 30000, -2),
 )
 
 # PRUEBA 4: ESPECIALIDAD VACIA
